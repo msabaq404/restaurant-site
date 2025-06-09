@@ -15,7 +15,7 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
   onclick={() => console.log(`Clicked on ${recipe.name}`)}
-  class="relative group grid grid-cols-1 bg-gray-100 max-w-92 h-full rounded-lg p-3 shadow-lg shadow-amber-600/20 cursor-pointer
+  class="relative group grid grid-cols-1 bg-gray-100 max-w-92 h-full rounded-lg p-3 shadow-lg shadow-amber-600/20 cursor-pointer overflow-hidden
   dark:bg-gray-950 dark:text-gray-100 dark:shadow-gray-900/20"
 >
   <div class="image-wrapper w-full rounded-xl overflow-hidden">
