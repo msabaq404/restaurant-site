@@ -1,0 +1,1 @@
+import{a as s}from"./state.svelte.-U_I4_bt.js";function t(e,o){const m=s().items;if(o>0){const n=m.find(a=>a.name===e.name);n?n.quantity=o:m.push({name:e.name,imageUrl:e.imageUrl,price:e.price,quantity:o})}else{const n=m.findIndex(a=>a.name==e.name);n>-1&&(m.splice(n,1),console.log("Removing"),s().items.forEach(a=>console.log(a.name)))}}export{t as u};
