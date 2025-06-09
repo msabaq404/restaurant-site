@@ -12,9 +12,8 @@
   // import { Spring } from "svelte/motion";
   // const rotate = new Spring({ deg: 0 }, { stiffness: 0.1, damping: 0.25 });
 
-
   let mobileMenuOpen = $state(false);
-  
+
   function spin(_node: SVGElement, { duration }: { duration: number }) {
     return {
       duration,
@@ -34,135 +33,157 @@
   class:dark={getTheme() === "dark"}
 >
   <div class="flex items-center gap-2 h-full">
-    <div class="h-full">
-      <img
-        src={logoSrc}
-        class="h-full w-auto"
-        alt="Restaurant Logo"
-        width={50}
-        height={50}
-      />
-    </div>
-    <h1 class="font-bold text-2xl sm:text-4xl text-primary">Savr.</h1>
+    
+      <div class="h-full">
+        <a href="/restaurant-site/" >
+          <img
+            src={logoSrc}
+            class="h-full w-auto"
+            alt="Restaurant Logo"
+            width={50}
+            height={50}
+          />
+        </a>
+      </div>
+      <a href="/restaurant-site">
+        <h1 class="font-bold text-2xl sm:text-4xl text-primary">Savr.</h1>
+      </a>
+   
   </div>
-  
+
   <!-- Desktop Navigation -->
   <nav class="ml-auto hidden md:block">
     <ul class="flex gap-4 text-lg">
-      <li><a href="/" class="">Home</a></li>
-      <li><a href="/menu" class="">Menu</a></li>
-      <li><a href="/story" class="">Our Story</a></li>
-      <li><a href="/contact" class="">Contact</a></li>
+      <li><a href="/restaurant-site/" class="">Home</a></li>
+      <li><a href="/restaurant-site#menu" class="">Menu</a></li>
+      <li><a href="/restaurant-site/story" class="">Our Story</a></li>
+      <li><a href="/restaurant-site/contact" class="">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Mobile Menu Button -->
-  <button 
-    class="ml-auto md:hidden p-2" 
+  <button
+    class="ml-auto md:hidden p-2"
     aria-label="Mobile Menu"
     onclick={() => {
       mobileMenuOpen = !mobileMenuOpen;
     }}
   >
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M4 6h16M4 12h16M4 18h16"
+      ></path>
     </svg>
   </button>
 
   <!-- Mobile Side Drawer -->
-   {#if mobileMenuOpen}
-  <div 
-    class="fixed inset-0 z-50 md:hidden"
-    class:hidden={!mobileMenuOpen}
-  >
-    <!-- Backdrop -->
-    <button 
-      class="absolute inset-0 bg-black/80 bg-opacity-50"
-      onclick={() => mobileMenuOpen = false}
-      aria-label="Close Mobile Menu"
-    ></button>
-    
-    <!-- Drawer -->
-    <div 
-      class="absolute top-0 left-0 h-full w-80 max-w-[80vw] bg-white dark:bg-gray-900 shadow-xl"
-      transition:fly={{ x: -320, duration: 300 }}
-    >
-      <!-- Drawer Header -->
-      <div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
-        <h2 class="text-lg font-semibold">Menu</h2>
-        <button 
-          class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
-          onclick={() => mobileMenuOpen = false}
-          aria-label="Close Menu"
+  {#if mobileMenuOpen}
+    <div class="fixed inset-0 z-50 md:hidden" class:hidden={!mobileMenuOpen}>
+      <!-- Backdrop -->
+      <button
+        class="absolute inset-0 bg-black/80 bg-opacity-50"
+        onclick={() => (mobileMenuOpen = false)}
+        aria-label="Close Mobile Menu"
+      ></button>
+
+      <!-- Drawer -->
+      <div
+        class="absolute top-0 left-0 h-full w-80 max-w-[80vw] bg-white dark:bg-gray-900 shadow-xl"
+        transition:fly={{ x: -320, duration: 300 }}
+      >
+        <!-- Drawer Header -->
+        <div
+          class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700"
         >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-      
-      <!-- Drawer Content -->
-      <nav class="p-4">
-        <ul class="space-y-4">
-          <li>
-            <a 
-              href="/" 
-              class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              onclick={() => mobileMenuOpen = false}
+          <h2 class="text-lg font-semibold">Menu</h2>
+          <button
+            class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+            onclick={() => (mobileMenuOpen = false)}
+            aria-label="Close Menu"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              Home
-            </a>
-          </li>
-          <li>
-            <a 
-              href="/menu" 
-              class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              onclick={() => mobileMenuOpen = false}
-            >
-              Menu
-            </a>
-          </li>
-          <li>
-            <a 
-              href="/story" 
-              class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              onclick={() => mobileMenuOpen = false}
-            >
-              Our Story
-            </a>
-          </li>
-          <li>
-            <a 
-              href="/contact" 
-              class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              onclick={() => mobileMenuOpen = false}
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-        
-        <!-- Mobile Veg Toggle -->
-        <div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
-          <div class="flex items-center justify-between">
-            <span class="text-sm font-medium">Vegetarian Mode</span>
-            <Toggle />
-          </div>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
         </div>
-      </nav>
-  
+
+        <!-- Drawer Content -->
+        <nav class="p-4">
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="/restaurant-site"
+                class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                onclick={() => (mobileMenuOpen = false)}
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/restaurant-site#menu"
+                class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                onclick={() => (mobileMenuOpen = false)}
+              >
+                Menu
+              </a>
+            </li>
+            <li>
+              <a
+                href="/restaurant-site/story"
+                class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                onclick={() => (mobileMenuOpen = false)}
+              >
+                Our Story
+              </a>
+            </li>
+            <li>
+              <a
+                href="/restaurant-site/contact"
+                class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                onclick={() => (mobileMenuOpen = false)}
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+
+          <!-- Mobile Veg Toggle -->
+          <div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-medium">Vegetarian Mode</span>
+              <Toggle />
+            </div>
+          </div>
+        </nav>
+      </div>
     </div>
-  </div>
   {/if}
 
   <div class="flex items-center gap-2">
-    <button class="cursor-pointer" aria-label="Cart Button"
+    <button
+      class="cursor-pointer"
+      aria-label="Cart Button"
       onclick={() => {
-        setCart(cart => ({
+        setCart((cart) => ({
           ...cart,
           isOpen: true,
         }));
-      }}>
+      }}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -178,7 +199,7 @@
         />
       </svg>
     </button>
-    
+
     <button
       class="block relative size-6 cursor-pointer"
       aria-label="Dark Theme Toggle Button"
@@ -217,7 +238,7 @@
         >
       {/if}
     </button>
-    
+
     <!-- Veg Mode Toggle -->
     <div class="hidden sm:block">
       <Toggle />

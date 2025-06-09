@@ -81,43 +81,45 @@ const menuData = recipes.map((sectionData) =>
 
 <BaseLayout>
   <Hero client:load {heroImagesOptimized} />
-  <Recipe client:load sectionData={menuData[0]} />
-  <div class="wave">
-    <svg
-      class="h-28 w-screen"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 320"
-      preserveAspectRatio="none"
-    >
-      <path
-        d="M0,96L26.7,101.3C53.3,107,107,117,160,149.3C213.3,181,267,235,320,245.3C373.3,256,427,224,480,181.3C533.3,139,587,85,640,80C693.3,75,747,117,800,133.3C853.3,149,907,139,960,154.7C1013.3,171,1067,213,1120,218.7C1173.3,224,1227,192,1280,186.7C1333.3,181,1387,203,1413,213.3L1440,224"
-        fill="none"
-        class="stroke-[2.5vw] stroke-amber-600/40"
-        stroke-linecap="round"></path>
-    </svg>
-  </div> 
-  <Recipe client:load sectionData={menuData[1]} />
-  <div class="star h-18 w-full flex justify-center items-center">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="h-full"
-      viewBox="0 0 1000 100"
-      ><path
-        class="fill-amber-500/40"
-        d="M500 0c0 28-22 50-50 50 28 0 50 22 50 50 0-28 22-50 50-50-28 0-50-22-50-50ZM620 10c0 22-18 40-40 40 22 0 40 18 40 40 0-22 18-40 40-40-22 0-40-18-40-40ZM380 10c0 22-18 40-40 40 22 0 40 18 40 40 0-22 18-40 40-40-22 0-40-18-40-40ZM720 20c0 17-13 30-30 30 17 0 30 13 30 30 0-17 13-30 30-30-17 0-30-13-30-30ZM280 20c0 17-13 30-30 30 17 0 30 13 30 30 0-17 13-30 30-30-17 0-30-13-30-30Z"
-      ></path></svg
-    >
-  </div>
-  <RecipeSlider client:load sectionData={menuData[2]} />
-  <div class="diamond h-12 w-full flex justify-center items-center">
-    <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 1000 100"
-      ><path
-        fill="oklch(0.9 0.04 67.29)"
-        d="m465 50 35-35 35 35-35 35zM565 50l35-35 35 35-35 35zM665 50l35-35 35 35-35 35zM365 50l35-35 35 35-35 35zM265 50l35-35 35 35-35 35z"
-      ></path></svg
-    >
-  </div>
-  <RecipeSlider client:load sectionData={menuData[3]} />
+  <section id="menu">
+    <Recipe client:load sectionData={menuData[0]} />
+    <div class="wave">
+      <svg
+        class="h-28 w-screen"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,96L26.7,101.3C53.3,107,107,117,160,149.3C213.3,181,267,235,320,245.3C373.3,256,427,224,480,181.3C533.3,139,587,85,640,80C693.3,75,747,117,800,133.3C853.3,149,907,139,960,154.7C1013.3,171,1067,213,1120,218.7C1173.3,224,1227,192,1280,186.7C1333.3,181,1387,203,1413,213.3L1440,224"
+          fill="none"
+          class="stroke-[2.5vw] stroke-amber-600/40"
+          stroke-linecap="round"></path>
+      </svg>
+    </div>
+    <Recipe client:load sectionData={menuData[1]} />
+    <div class="star h-18 w-full flex justify-center items-center">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-full"
+        viewBox="0 0 1000 100"
+        ><path
+          class="fill-amber-500/40"
+          d="M500 0c0 28-22 50-50 50 28 0 50 22 50 50 0-28 22-50 50-50-28 0-50-22-50-50ZM620 10c0 22-18 40-40 40 22 0 40 18 40 40 0-22 18-40 40-40-22 0-40-18-40-40ZM380 10c0 22-18 40-40 40 22 0 40 18 40 40 0-22 18-40 40-40-22 0-40-18-40-40ZM720 20c0 17-13 30-30 30 17 0 30 13 30 30 0-17 13-30 30-30-17 0-30-13-30-30ZM280 20c0 17-13 30-30 30 17 0 30 13 30 30 0-17 13-30 30-30-17 0-30-13-30-30Z"
+        ></path></svg
+      >
+    </div>
+    <RecipeSlider client:load sectionData={menuData[2]} />
+    <div class="diamond h-12 w-full flex justify-center items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 1000 100"
+        ><path
+          fill="oklch(0.9 0.04 67.29)"
+          d="m465 50 35-35 35 35-35 35zM565 50l35-35 35 35-35 35zM665 50l35-35 35 35-35 35zM365 50l35-35 35 35-35 35zM265 50l35-35 35 35-35 35z"
+        ></path></svg
+      >
+    </div>
+    <RecipeSlider client:load sectionData={menuData[3]} />
+  </section>
   <Reservation client:load />
   <Cart client:load />
 </BaseLayout>
