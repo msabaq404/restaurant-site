@@ -21,6 +21,7 @@
 </script>
 
 <div
+  id="reservations"
   class:dark={getTheme() === "dark"}
   class="min-h-screen flex items-center justify-center bg-[#fdf3e7] dark:bg-gray-950 px-4 py-12"
 >
