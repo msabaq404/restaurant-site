@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+import OurStory from "../assets/our-story.jpg";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <div class="our-story min-h-screen px-4">
+      <section
+        class="relative max-w-5xl mx-auto mt-2 rounded-lg overflow-hidden shadow-lg"
+      >
+        <div class="absolute z-10 bottom-0 text-white">
+          <h1 class="text-3xl font-bold ml-4 mb-4">Our Story</h1>
+        </div>
+        <Image
+          src={OurStory}
+          alt="A beautiful view of the restaurant's interior"
+          width={1000}
+          height={600}
+          class="w-full h-72 object-cover brightness-75"
+        />
+      </section>
+      <article>
+        <section class="max-w-5xl mx-auto p-4 text-gray-600 dark:text-gray-300">
+          <p class="mb-4">
+            Savr was founded in 2010 by Chef Isabella Rossi, a culinary visionary
+            with a deep-rooted passion for crafting unforgettable dining
+            experiences. Inspired by her global travels and her rich Italian
+            heritage, Isabella envisioned a place that would celebrate not only the
+            art of cooking, but also the joy of gathering and sharing meaningful
+            moments over delicious meals.
+          </p>
+          <p class="mb-4">
+            From its humble beginnings as a small neighborhood eatery, Savr has
+            blossomed into a renowned culinary destination. Over the years, it has
+            become known for its bold, innovative dishes, warm and inviting
+            ambiance, and consistently exceptional service. Our unwavering
+            commitment to sourcing the freshest local ingredients and our dedication
+            to culinary excellence have earned us both critical acclaim and a loyal
+            community of food lovers.
+          </p>
+          <p class="mb-4">
+            At Savr, we believe that every meal should be a celebration — a moment
+            to pause, connect, and enjoy. Whether you're joining us for an intimate
+            dinner, a lively family gathering, or a casual lunch with friends, we
+            strive to create an experience that excites the senses and creates
+            lasting memories. Our menu features an inspired variety of dishes, from
+            timeless Italian classics to bold, contemporary creations, each crafted
+            with precision, care, and a deep respect for flavor.
+          </p>
+          <p class="mb-4">
+            We warmly invite you to explore our story, discover our passion for
+            food, and be part of the journey that makes Savr unique. Join us in a
+            culinary adventure that promises to tantalize your taste buds, awaken
+            your senses, and nourish your soul. Welcome to Savr — where every dish
+            is a masterpiece, and every guest is part of our extended family.
+          </p>
+        </section>
+      </article>
+  </div>
+</BaseLayout>

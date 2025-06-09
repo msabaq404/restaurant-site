@@ -6,9 +6,20 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "convert": "node ./src/scripts/convert-images.js",
+    "pc": "node ./src/scripts/preview-component.mjs"
   },
   "dependencies": {
-    "astro": "^5.8.0"
+    "@astrojs/svelte": "^7.1.0",
+    "@tailwindcss/vite": "^4.1.7",
+    "astro": "^5.8.0",
+    "sharp": "^0.34.2",
+    "svelte": "^5.33.11",
+    "swiper": "^11.2.8",
+    "tailwindcss": "^4.1.7"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
   }
 }

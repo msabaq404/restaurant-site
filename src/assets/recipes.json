@@ -1,0 +1,155 @@
+[
+    {
+        "section": "Specials",
+        "recipes": [
+            {
+                "name": "Seared Duck Breast",
+                "description": "Tender duck breast served with a berry reduction and fresh microgreens.",
+                "price": "₹899",
+                "imageUrl": "",
+                "isVeg": false
+            },
+            {
+                "name": "Beef Wellington",
+                "description": "Classic beef Wellington with a flaky crust, served with asparagus and potato purée.",
+                "price": "₹1099",
+                "imageUrl": "",
+                "isVeg": false
+            },
+            {
+                "name": "Grilled Lobster Tail",
+                "description": "Lobster tail grilled to perfection, topped with garlic butter and lemon.",
+                "price": "₹1199",
+                "imageUrl": "",
+                "isVeg": false
+            },
+            {
+                "name": "Stuffed Portobello Mushrooms",
+                "description": "Baked portobello mushrooms filled with herbed cheese and breadcrumbs.",
+                "price": "₹549",
+                "imageUrl": "",
+                "isVeg": true
+            },
+            {
+                "name": "Truffle Risotto",
+                "description": "Creamy risotto infused with truffle oil and topped with shaved parmesan.",
+                "price": "₹599",
+                "imageUrl": "",
+                "isVeg": true
+            }
+        ]
+    },
+    {
+        "section": "Main Courses",
+        "recipes": [
+            {
+                "name": "Margherita Pizza",
+                "description": "Stone-baked pizza topped with fresh mozzarella, tomatoes, and basil.",
+                "price": "₹379",
+                "imageUrl": "",
+                "isVeg": true
+            },
+            {
+                "name": "Grilled Salmon Fillet",
+                "description": "Perfectly grilled salmon served with dill sauce, wild rice, and broccoli.",
+                "price": "₹749",
+                "imageUrl": "",
+                "isVeg": false
+            },
+            {
+                "name": "Vegan Tofu Stir Fry",
+                "description": "Tofu sautéed with bell peppers and sesame, served on a bed of quinoa.",
+                "price": "₹449",
+                "imageUrl": "",
+                "isVeg": true
+            },
+            {
+                "name": "Classic Cheeseburger",
+                "description": "Grilled beef patty with melted cheddar, lettuce, and house sauce in a toasted brioche bun.",
+                "price": "₹399",
+                "imageUrl": "",
+                "isVeg": false
+            }
+        ]
+    },
+    {
+        "section": "Starters",
+        "recipes": [
+            {
+                "name": "Tomato Basil Bruschetta",
+                "description": "Toasted baguette topped with fresh tomatoes, basil, and olive oil.",
+                "price": "₹199",
+                "imageUrl": "",
+                "isVeg": true
+            },
+            {
+                "name": "Vegetable Spring Rolls",
+                "description": "Crispy rolls filled with veggies, served with sweet chili sauce.",
+                "price": "₹249",
+                "imageUrl": "",
+                "isVeg": true
+            },
+            {
+                "name": "Mini Chicken Skewers",
+                "description": "Grilled chicken skewers with spicy peanut dip.",
+                "price": "₹299",
+                "imageUrl": "",
+                "isVeg": false
+            },
+            {
+                "name": "French Fries",
+                "description": "Crispy golden fries served with ketchup and garlic aioli.",
+                "price": "₹149",
+                "imageUrl": "",
+                "isVeg": true
+            },
+            {
+                "name": "Mac and Cheese",
+                "description": "Creamy macaroni with melted cheese and a crispy top.",
+                "price": "₹199",
+                "imageUrl": "",
+                "isVeg": true
+            }
+        ]
+    },
+    {
+        "section": "Desserts and Drinks",
+        "recipes": [
+            {
+                "name": "Chocolate Lava Cake",
+                "description": "Warm chocolate cake with a gooey center, served with ice cream.",
+                "price": "₹229",
+                "imageUrl": "",
+                "isVeg": true
+            },
+            {
+                "name": "Strawberry Cheesecake",
+                "description": "Classic cheesecake topped with fresh strawberry sauce.",
+                "price": "₹249",
+                "imageUrl": "",
+                "isVeg": true
+            },
+            {
+                "name": "Tiramisu",
+                "description": "Layered Italian dessert with espresso-soaked biscuits and cocoa.",
+                "price": "₹279",
+                "imageUrl": "",
+                "isVeg": true
+            },
+            {
+                "name": "Fresh Orange Juice",
+                "description": "Chilled juice made from freshly squeezed oranges.",
+                "price": "₹149",
+                "imageUrl": "",
+                "isVeg": true
+            },
+            {
+                "name": "Espresso",
+                "description": "Strong and bold single shot of freshly brewed espresso.",
+                "price": "₹99",
+                "imageUrl": "",
+                "isVeg": true
+            }
+        ]
+    }
+]

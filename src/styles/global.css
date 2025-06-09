@@ -1,0 +1,14 @@
+@import "tailwindcss";
+/* @config "../../tailwind.config.mjs" */
+@theme {
+  --color-primary: #e76c14;
+  /* --font-playfair: 'Playfair Display', serif; */
+  --font-inter: "Inter", sans-serif;
+  --breakpoint-xxl: 84rem;
+}
+/* @custom-variant dark (&:is(.dark *), &:is(.dark), &:is(*:has(.dark) + * *)) {} */
+@custom-variant dark (&:is(body:has(.dark) *)) {}
+
+body:has(.dark) {
+  background-color: #030712;
+}
